@@ -5,7 +5,7 @@ const ProjectItem = ({ item }) => {
   return (
     <div
       style={{ backgroundColor: item.hovered ? `${item.color}` : `none` }}
-      className={`group/main relative hover:bg-red-400 rounded-xl px-40 hover:px-28 py-16 hover:mb-8 transition-all duration-300 ease-in-out`}
+      className={`group/main relative rounded-xl px-40 hover:px-28 py-16 hover:mb-8 transition-all duration-300 ease-in-out`}
     >
       <div className="flex justify-between items-center">
         <h1 className="w-fit text-6xl font-medium whitespace-nowrap">

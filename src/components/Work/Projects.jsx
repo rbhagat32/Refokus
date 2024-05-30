@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
@@ -145,9 +145,11 @@ const Projects = () => {
     },
   ];
 
+  const [products, setProducts] = useState(data);
+
   return (
     <div className="container mx-auto w-full mt-40">
-      {data.map((item, index) => {
+      {products.map((item, index) => {
         return <ProjectItem key={index} item={item} />;
       })}
     </div>
