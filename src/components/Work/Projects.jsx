@@ -147,10 +147,28 @@ const Projects = () => {
 
   const [products, setProducts] = useState(data);
 
+  const handleMouseHover = (index) => {
+    setProducts((prev) => {
+      return prev.map((item, i) => {
+        if (i === index) {
+          return { ...item, hovered: !item.hovered };
+        }
+        return item;
+      });
+    });
+  };
+
   return (
     <div className="container mx-auto w-full mt-40">
       {products.map((item, index) => {
-        return <ProjectItem key={index} item={item} />;
+        return (
+          <ProjectItem
+            key={index}
+            item={item}
+            index={index}
+            handleMouseHover={handleMouseHover}
+          />
+        );
       })}
     </div>
   );
