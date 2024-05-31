@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar/Navbar";
 import Routing from "./components/Utils/Routing";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   // Lenis
@@ -28,9 +29,10 @@ const App = () => {
   });
 
   return (
-    <div className="container mx-auto w-full">
+    <div className="container mx-auto w-full overflow-hidden">
       <Navbar />
       <Routing />
+      <Footer />
     </div>
   );
 };

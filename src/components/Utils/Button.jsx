@@ -3,10 +3,17 @@ import { IoIosReturnRight } from "react-icons/io";
 
 const Button = ({ buttonText }) => {
   return (
-    <div className="w-fit mt-2 flex items-center px-5 py-2 rounded-full bg-zinc-100 text-black text-sm font-semibold">
-      {buttonText}
-      <IoIosReturnRight className="inline-block mt-1 ml-2" />
-    </div>
+    <button className="group/btn relative cursor-pointer overflow-hidden h-[42px] w-fit mt-2 flex flex-col items-center rounded-full bg-zinc-100 text-black font-bold">
+      <div className="group-hover/btn:-translate-y-10 px-5 py-2 transition-all duration-300 ease-in-out">
+        {buttonText}
+        <IoIosReturnRight className="inline-block ml-2" />
+      </div>
+
+      <div className="group-hover/btn:-translate-y-10 px-5 py-2 transition-all duration-300 ease-in-out">
+        {buttonText}
+        <IoIosReturnRight className="inline-block ml-2" />
+      </div>
+    </button>
   );
 };
 

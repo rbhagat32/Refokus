@@ -25,9 +25,9 @@ const Navbar = () => {
                 to={item.route}
                 className={(e) => {
                   return [
-                    "mt-2 flex items-center gap-1 font-medium text-zinc-700 hover:text-green-500 transition-all duration-300 ease-in-out",
+                    "mt-2 flex items-center gap-1 font-medium hover:text-green-500 transition-all duration-300 ease-in-out",
                     e.isActive &&
-                      "text-zinc-100 before:bg-green-500 before:h-1 before:w-1 before:absolute before:-left-[8px] before:rounded-full",
+                      "text-zinc-300 before:bg-green-500 before:h-1 before:w-1 before:absolute before:-left-[8px] before:rounded-full",
                   ].join(" ");
                 }}
               >

@@ -22,7 +22,13 @@ const ProjectItem = ({ item, index, handleMouseHover }) => {
       </div>
 
       <div className="hidden group-hover:block rounded-xl overflow-hidden h-[375px] w-[500px] absolute top-1/2 left-1/2 -translate-x-[55%] -translate-y-[50%] transition-all duration-300 ease-in-out">
-        <video autoPlay loop muted src={item.video}></video>
+        <video
+          className="h-full w-full"
+          autoPlay
+          loop
+          muted
+          src={item.video}
+        ></video>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Main from "../Work/Main";
 import Marquee from "../Work/Marquee";
 import Projects from "../Work/Projects";
+import DoubleMarquee from "../Work/DoubleMarquee";
 
 const Work = () => {
   return (
@@ -9,6 +10,7 @@ const Work = () => {
       <Main />
       <Marquee />
       <Projects />
+      <DoubleMarquee />
     </div>
   );
 };

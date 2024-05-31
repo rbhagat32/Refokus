@@ -159,7 +159,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="container mx-auto w-full mt-40">
+    <div className="container mx-auto w-full mt-20">
       {products.map((item, index) => {
         return (
           <ProjectItem
