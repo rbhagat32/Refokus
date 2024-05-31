@@ -8,7 +8,7 @@ const Navbar = () => {
     { text: "Home", route: "/" },
     { text: "Work", route: "/work" },
     { text: "Culture", route: "/culture" },
-    { text: "|", route: "" },
+    { text: "", route: "/null" },
     { text: "News", route: "/news" },
   ];
 
