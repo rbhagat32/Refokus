@@ -45,6 +45,7 @@ a {
   color: rgb(82 82 91);
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
 
 a:after {

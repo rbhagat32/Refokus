@@ -31,13 +31,13 @@ const DoubleMarquee = () => {
   ];
 
   return (
-    <div className="container mx-auto mt-48">
+    <div className="container mx-auto mt-32">
       {/* Upper Marquee */}
       <div className="myGradient flex">
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0"
         >
           {upper_images.map((_, index) => (
@@ -51,7 +51,7 @@ const DoubleMarquee = () => {
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0"
         >
           {upper_images.map((_, index) => (
@@ -69,7 +69,7 @@ const DoubleMarquee = () => {
         <motion.div
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0"
         >
           {lower_images.map((_, index) => (
@@ -83,7 +83,7 @@ const DoubleMarquee = () => {
         <motion.div
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0"
         >
           {lower_images.map((_, index) => (
