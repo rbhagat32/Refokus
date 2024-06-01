@@ -3,6 +3,7 @@ import Main from "../Work/Main";
 import Marquee from "../Work/Marquee";
 import Projects from "../Work/Projects";
 import DoubleMarquee from "../Work/DoubleMarquee";
+import Transition from "../Utils/Transition";
 
 const Work = () => {
   return (
@@ -15,4 +16,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Transition(Work);

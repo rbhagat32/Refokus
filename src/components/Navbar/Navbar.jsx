@@ -7,7 +7,7 @@ const Navbar = () => {
   const navData = [
     { text: "Home", route: "/" },
     { text: "Work", route: "/work" },
-    { text: "Culture", route: "/culture" },
+    { text: "About", route: "/about" },
     { text: "", route: "/null" },
     { text: "News", route: "/news" },
   ];
