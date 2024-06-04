@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import Navbar from "./components/Navbar/Navbar";
 import Routing from "./components/Utils/Routing";
 import Footer from "./components/Footer/Footer";
+import Cursor from "./components/Utils/Cursor";
 
 const App = () => {
   // Lenis
@@ -30,6 +31,7 @@ const App = () => {
 
   return (
     <div className="container mx-auto w-full overflow-hidden">
+      <Cursor />
       <Navbar />
       <Routing />
       <Footer />
