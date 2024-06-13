@@ -38,7 +38,7 @@ const Cursor = () => {
         animate={{
           transition: { duration: 0.2 },
         }}
-        className="fixed top-0 left-0 h-[20px] w-[20px] rounded-full bg-white z-10 mix-blend-difference pointer-events-none"
+        className="fixed top-0 left-0 h-[20px] w-[20px] rounded-full bg-white z-[999] mix-blend-difference pointer-events-none"
       />
     </>
   );
