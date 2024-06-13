@@ -31,7 +31,7 @@ const DoubleMarquee = () => {
   ];
 
   return (
-    <div className="container mx-auto mt-32">
+    <div className="overflow-hidden container mx-auto mt-32">
       {/* Upper Marquee */}
       <div className="myGradient flex">
         <motion.div

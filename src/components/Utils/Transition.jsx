@@ -13,7 +13,7 @@ const Transition = (Component) => {
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1], delay: 2 }}
       >
         <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
-          <h1 className="z-[99999] text-8xl font-bold">
+          <h1 className="text-8xl font-bold">
             Refokus
             <motion.span
               animate={{ color: "rgb(34 197 94)" }}
