@@ -7,17 +7,17 @@ const Images = () => {
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end start"],
+    offset: ["start 0.2", "end start"],
   });
 
-  const translateLeftHigh = useTransform(scrollYProgress, [0, 1], [0, -500]);
-  const translateRightHigh = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const translateLeftHigh = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const translateRightHigh = useTransform(scrollYProgress, [0, 1], [0, 400]);
   const translateLeftMid = useTransform(scrollYProgress, [0, 1], [0, -300]);
   const translateRightMid = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const translateLeftLow = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const translateRightLow = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const translateUp = useTransform(scrollYProgress, [0, 1], [0, -300]);
-  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 800]);
+  const translateUp = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
     <div ref={container} className="relative h-[250vh] overflow-hidden">
@@ -40,7 +40,7 @@ const Images = () => {
       <Image
         height={"h-[200px]"}
         width={"w-[200px]"}
-        x={"right-[28%]"}
+        x={"right-[30%]"}
         y={"top-[5%]"}
         url={"/about/about03.png"}
         moveX={translateLeftLow}
