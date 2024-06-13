@@ -17,7 +17,7 @@ const Images = () => {
   const translateLeftLow = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const translateRightLow = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const translateUp = useTransform(scrollYProgress, [0, 1], [0, -300]);
-  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 800]);
 
   return (
     <div ref={container} className="relative h-[250vh] overflow-hidden">
