@@ -17,7 +17,7 @@ const Images = () => {
   const translateLeftLow = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const translateRightLow = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const translateUp = useTransform(scrollYProgress, [0, 1], [0, -300]);
-  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const translateDown = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
     <div ref={container} className="relative h-[250vh] overflow-hidden">
@@ -77,15 +77,6 @@ const Images = () => {
         url={"/about/about07.png"}
         moveX={translateLeftLow}
       />
-      <Card
-        title={"Our People"}
-        num={"25+"}
-        para={
-          "We are a world-class team of experts working remotely across different time zones, mostly in Germany, the UK, Argentina, and the US East Coast—the world's leading hubs for creative talent."
-        }
-        x={"left-[5%]"}
-        y={"top-[40%]"}
-      />
       <Image
         height={"h-[230px]"}
         width={"w-[180px]"}
@@ -93,15 +84,6 @@ const Images = () => {
         y={"top-[48%]"}
         url={"/about/about08.png"}
         moveX={translateRightMid}
-      />
-      <Card
-        title={"Our Awards"}
-        num={"77"}
-        para={
-          "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year."
-        }
-        x={"right-[7%]"}
-        y={"top-[48%]"}
       />
       <Image
         height={"h-[200px]"}
@@ -119,6 +101,32 @@ const Images = () => {
         url={"/about/about10.png"}
         moveY={translateUp}
       />
+      <Image
+        height={"h-[220px]"}
+        width={"w-[280px]"}
+        x={"right-[20%]"}
+        y={"top-[80%]"}
+        url={"/about/about11.png"}
+        moveX={translateRightMid}
+      />
+      <Card
+        title={"Our People"}
+        num={"25+"}
+        para={
+          "We are a world-class team of experts working remotely across different time zones, mostly in Germany, the UK, Argentina, and the US East Coast—the world's leading hubs for creative talent."
+        }
+        x={"left-[5%]"}
+        y={"top-[40%]"}
+      />
+      <Card
+        title={"Our Awards"}
+        num={"77"}
+        para={
+          "We are results-driven and people-focused (but awards are nice too!). We've won website of the day from multiple awards organizations and have been nominated twice for Webflow Agency of the year."
+        }
+        x={"right-[7%]"}
+        y={"top-[48%]"}
+      />
       <Card
         title={"Our History"}
         num={"2021"}
@@ -127,14 +135,6 @@ const Images = () => {
         }
         x={"left-[20%]"}
         y={"top-[72%]"}
-      />
-      <Image
-        height={"h-[220px]"}
-        width={"w-[280px]"}
-        x={"right-[20%]"}
-        y={"top-[80%]"}
-        url={"/about/about11.png"}
-        moveX={translateRightMid}
       />
     </div>
   );
