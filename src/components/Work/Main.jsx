@@ -1,21 +1,25 @@
+import React, { useRef, useState } from "react";
 import { useScroll } from "framer-motion";
-import React, { useState } from "react";
 
 const Main = () => {
   const data = [
-    { src: "/work/work01.png", top: "60%", left: "50%", isActive: false },
-    { src: "/work/work02.png", top: "68%", left: "48%", isActive: false },
-    { src: "/work/work03.png", top: "69%", left: "55%", isActive: false },
-    { src: "/work/work04.png", top: "72%", left: "45%", isActive: false },
-    { src: "/work/work05.png", top: "75%", left: "53%", isActive: false },
-    { src: "/work/work06.png", top: "80%", left: "50%", isActive: false },
+    { src: "/work/work01.jpg", top: "60%", left: "50%", isActive: false },
+    { src: "/work/work02.jpg", top: "68%", left: "48%", isActive: false },
+    { src: "/work/work03.jpg", top: "69%", left: "55%", isActive: false },
+    { src: "/work/work04.jpg", top: "72%", left: "45%", isActive: false },
+    { src: "/work/work05.jpg", top: "75%", left: "53%", isActive: false },
+    { src: "/work/work06.jpg", top: "80%", left: "50%", isActive: false },
   ];
 
   const [images, setImages] = useState(data);
 
-  const { scrollYProgress } = useScroll();
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["-50px start", "end start"],
+  });
 
-  scrollYProgress.on("change", (data) => {
+  scrollYProgress.on("change", (val) => {
     function showImages(arr) {
       setImages((prev) => {
         return prev.map((image, index) =>
@@ -25,40 +29,18 @@ const Main = () => {
         );
       });
     }
-
-    switch (Math.floor(data * 100)) {
-      case 0:
-        showImages([]);
-        break;
-
-      case 1:
-        showImages([0]);
-        break;
-
-      case 2:
-        showImages([0, 1]);
-        break;
-
-      case 3:
-        showImages([0, 1, 2]);
-        break;
-
-      case 4:
-        showImages([0, 1, 2, 3]);
-        break;
-
-      case 5:
-        showImages([0, 1, 2, 3, 4]);
-        break;
-
-      case 6:
-        showImages([0, 1, 2, 3, 4, 5]);
-        break;
-    }
+    console.log(val);
+    if (val >= 0 && val <= 0.04) showImages([]);
+    else if (val > 0.04 && val <= 0.1) showImages([0]);
+    else if (val > 0.1 && val <= 0.2) showImages([0, 1]);
+    else if (val > 0.2 && val <= 0.3) showImages([0, 1, 2]);
+    else if (val > 0.3 && val <= 0.4) showImages([0, 1, 2, 3]);
+    else if (val > 0.4 && val <= 0.5) showImages([0, 1, 2, 3, 4]);
+    else if (val > 0.5 && val <= 0.6) showImages([0, 1, 2, 3, 4, 5]);
   });
 
   return (
-    <div className="relative w-full text-center">
+    <div ref={container} className="relative w-full text-center">
       <h1 className="leading-none text-[36vw] font-medium">work</h1>
       <h2 className="text-zinc-600 text-xl">
         Web Design, Webflow Development, Creative Development
