@@ -29,7 +29,7 @@ const Main = () => {
         );
       });
     }
-    console.log(val);
+
     if (val >= 0 && val <= 0.04) showImages([]);
     else if (val > 0.04 && val <= 0.1) showImages([0]);
     else if (val > 0.1 && val <= 0.2) showImages([0, 1]);
