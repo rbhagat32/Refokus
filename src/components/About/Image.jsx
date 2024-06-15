@@ -7,7 +7,7 @@ const Image = ({ height, width, x, y, url, moveX = 0, moveY = 0 }) => {
       style={{ translateX: moveX, translateY: moveY }}
       className={`absolute ${x} ${y} ${height} ${width} overflow-hidden`}
     >
-      <img src={url} className="h-full w-full rounded-lg" />
+      <img loading="eager" src={url} className="h-full w-full rounded-lg" />
     </motion.div>
   );
 };

@@ -21,7 +21,7 @@ const FooterLinks = () => {
           );
         })}
       </div>
-      <img src="/work/footer-image.svg" />
+      <img loading="lazy" src="/work/footer-image.svg" />
     </div>
   );
 };

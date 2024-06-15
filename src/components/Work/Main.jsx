@@ -50,6 +50,7 @@ const Main = () => {
           (image, index) =>
             image.isActive && (
               <img
+                loading="eager"
                 key={index}
                 src={image.src}
                 className="absolute w-64 rounded-lg -translate-x-[50%] -translate-y-[50%]"

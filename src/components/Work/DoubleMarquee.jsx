@@ -42,6 +42,7 @@ const DoubleMarquee = () => {
         >
           {upper_images.map((_, index) => (
             <img
+              loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
               src={upper_images[index]}
@@ -56,6 +57,7 @@ const DoubleMarquee = () => {
         >
           {upper_images.map((_, index) => (
             <img
+              loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
               src={upper_images[index]}
@@ -74,6 +76,7 @@ const DoubleMarquee = () => {
         >
           {lower_images.map((_, index) => (
             <img
+              loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
               src={lower_images[index]}
@@ -88,6 +91,7 @@ const DoubleMarquee = () => {
         >
           {lower_images.map((_, index) => (
             <img
+              loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
               src={lower_images[index]}

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="relative z-10 container mx-auto px-8 max-w-screen-xl mt-4 flex lg:gap-28 xl:gap-40 justify-between items-center pb-4 border-b-2 border-zinc-700">
-      <img className="h-8" src="NavbarLogo.svg" />
+      <img loading="eager" className="h-8" src="NavbarLogo.svg" />
 
       <div className="hidden w-full lg:flex justify-between items-center">
         <div className="flex gap-8">
