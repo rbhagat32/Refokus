@@ -46,18 +46,21 @@ const Main = () => {
         Web Design, Webflow Development, Creative Development
       </h2>
       <div className="absolute top-0 w-full h-full">
-        {images.map(
-          (image, index) =>
-            image.isActive && (
-              <img
-                loading="eager"
-                key={index}
-                src={image.src}
-                className="absolute w-64 rounded-lg -translate-x-[50%] -translate-y-[50%]"
-                style={{ top: image.top, left: image.left }}
-              />
-            )
-        )}
+        {images.map((image, index) => {
+          return (
+            <img
+              loading="eager"
+              key={index}
+              src={image.src}
+              className="absolute w-64 rounded-lg -translate-x-[50%] -translate-y-[50%]"
+              style={{
+                top: image.top,
+                left: image.left,
+                opacity: image.isActive ? 1 : 0,
+              }}
+            />
+          );
+        })}
       </div>
     </div>
   );

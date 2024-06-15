@@ -7,7 +7,7 @@ const ProjectItem = ({ item, index, handleMouseHover }) => {
       onMouseEnter={() => handleMouseHover(index)}
       onMouseLeave={() => handleMouseHover(index)}
       style={{
-        backgroundColor: item.hovered ? `${item.color}` : `var(--clr-dark)`,
+        backgroundColor: item.hovered ? item.color : "var(--clr-dark)",
       }}
       className={`group relative rounded-xl px-40 hover:px-28 py-16 hover:mb-8 transition-all duration-300 ease-in-out`}
     >
