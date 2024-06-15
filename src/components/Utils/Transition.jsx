@@ -13,14 +13,17 @@ const Transition = (Component) => {
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1], delay: 2 }}
       >
         <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
-          <h1 className="text-8xl font-bold">
-            Refokus
+          <h1 className="relative p-6 text-8xl font-bold flex items-end gap-2">
+            Refokus.
             <motion.span
-              animate={{ color: "rgb(34 197 94)" }}
+              animate={{
+                backgroundColor: "rgb(34 197 94)",
+                boxShadow:
+                  "2px 2px 20px 0px rgb(34 197 94), 2px -2px 20px 0px rgb(34 197 94), -2px 2px 20px 0px rgb(34 197 94), -2px -2px 20px 0px rgb(34 197 94), 2px 2px 60px 0px rgb(34 197 94), 2px -2px 60px 0px rgb(34 197 94), -2px 2px 60px 0px rgb(34 197 94), -2px -2px 60px 0px rgb(34 197 94)",
+              }}
               transition={{ delay: 1, duration: 0 }}
-            >
-              .
-            </motion.span>
+              className="absolute top-0 right-0 h-5 w-5 rounded-full"
+            />
           </h1>
         </div>
       </motion.div>
