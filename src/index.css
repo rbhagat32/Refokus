@@ -63,6 +63,12 @@ a:hover:after {
   width: 100%;
 }
 
+.stroke {
+  stroke: 1.5px var(--clr-light);
+  -webkit-text-stroke: 1.5px var(--clr-light);
+  color: transparent;
+}
+
 .myGradient {
   mask-image: linear-gradient(
     to right,
