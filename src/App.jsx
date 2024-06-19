@@ -30,7 +30,7 @@ const App = () => {
   });
 
   return (
-    <div className="container mx-auto w-full overflow-hidden">
+    <div className="container mx-auto w-full">
       <Cursor />
       <Navbar />
       <Routing />
