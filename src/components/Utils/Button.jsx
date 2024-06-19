@@ -4,7 +4,7 @@ import { IoIosReturnRight } from "react-icons/io";
 const Button = ({
   buttonText = "Button",
   altText = buttonText,
-  bgColor = "bg-zinc-100",
+  bgColor = "bg-white",
 }) => {
   return (
     <button
