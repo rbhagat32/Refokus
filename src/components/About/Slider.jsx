@@ -7,19 +7,19 @@ const Slider = ({ url, scrollYProgress, offset, direction }) => {
 
   return (
     <motion.div style={{ left: offset, x: move }} className="relative flex">
-      <div className="flex items-center gap-6 whitespace-nowrap pr-6">
+      <div className="flex items-center gap-6 whitespace-nowrap pr-6 border-b-2">
         <h1 className="text-[6vw] font-bold">Design Driven Tech</h1>
         <span className="relative h-[6vw] aspect-[4/2] rounded-full overflow-hidden">
           <img loading="lazy" src={url} className="relative" />
         </span>
       </div>
-      <div className="flex items-center gap-6 whitespace-nowrap pr-6">
+      <div className="flex items-center gap-6 whitespace-nowrap pr-6 border-b-2">
         <h1 className="text-[6vw] font-bold">Design Driven Tech</h1>
         <span className="relative h-[6vw] aspect-[4/2] rounded-full overflow-hidden">
           <img loading="lazy" src={url} className="relative" />
         </span>
       </div>
-      <div className="flex items-center gap-6 whitespace-nowrap pr-6">
+      <div className="flex items-center gap-6 whitespace-nowrap pr-6 border-b-2">
         <h1 className="text-[6vw] font-bold">Design Driven Tech</h1>
         <span className="relative h-[6vw] aspect-[4/2] rounded-full overflow-hidden">
           <img loading="lazy" src={url} className="relative" />
