@@ -46,7 +46,11 @@ const SwiperJs = () => {
             <SwiperSlide key={index} className="w-full">
               <div className="max-w-[50vw] my-12 mx-auto flex justify-center items-center gap-10">
                 <div className="flex-shrink-0 w-72 h-72 rounded-2xl overflow-hidden">
-                  <img className="w-full h-full object-cover" src={item.url} />
+                  <img
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                    src={item.url}
+                  />
                 </div>
                 <div className="flex flex-col gap-4">
                   <p className="max-w-[60ch]">{item.para}</p>
