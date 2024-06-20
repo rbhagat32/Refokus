@@ -8,7 +8,7 @@ const Column = ({ images, translateY }) => {
       {images.map((item, index) => {
         return (
           <div key={index} className={styles.imageContainer}>
-            <img loading="lazy" src={item} />
+            <img loading="eager" src={item} />
           </div>
         );
       })}
