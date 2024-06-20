@@ -3,6 +3,7 @@ import Transition from "../Utils/Transition";
 import DoubleMarquee from "../Work/DoubleMarquee";
 import Cards from "../Home/Cards";
 import Parallax from "../Home/Parallax";
+import SwiperJs from "../Home/SwiperJs";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <DoubleMarquee />
       <Cards />
       <Parallax />
+      <SwiperJs />
     </div>
   );
 };
