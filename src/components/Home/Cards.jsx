@@ -77,7 +77,7 @@ const Cards = () => {
   return (
     <div ref={conatiner} className={`w-full ${height} mt-32`}>
       {data.map((item, index) => {
-        const targetScale = 1 - (data.length - index) * 0.1;
+        const targetScale = 1 - (data.length - index) * 0.02;
         return (
           <Card
             key={index}
