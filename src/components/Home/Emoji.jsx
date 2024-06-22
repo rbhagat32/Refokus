@@ -116,8 +116,8 @@ const Emoji = () => {
       <div ref={emoji} className={styles.emoji}>
         <div ref={face} className={styles.face}>
           <div className={styles.eyes}>
-            <img src="/home/eye.svg" />
-            <img src="/home/eye.svg" />
+            <img loading="eager" src="/home/eye.svg" />
+            <img loading="eager" src="/home/eye.svg" />
           </div>
 
           <div className={styles.mouthWrapper}>
