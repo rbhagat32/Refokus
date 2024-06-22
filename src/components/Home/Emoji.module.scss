@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20vw;
+    font-weight: 900;
+  }
+
+  .stroke {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-weight: 900;
+
+    stroke: 1.5px var(--clr-light);
+    -webkit-text-stroke: 1.5px var(--clr-light);
+    color: transparent;
+    opacity: 0.2;
+  }
+
+  .left,
+  .right {
+    position: absolute;
+    z-index: 10;
+    width: 20%;
+    height: 100%;
+    top: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .emoji {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 363px;
+    height: 373px;
+    background-color: #5445ff;
+    background-image: url(../../assets/sphere.png);
+    background-size: cover;
+    border-radius: 100%;
+    overflow: hidden;
+
+    .face {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .eyes {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+          animation: eye-anim 4s infinite linear;
+
+          @keyframes eye-anim {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+
+      .mouthWrapper {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 40px;
+
+        .mouth {
+          width: 40px;
+          height: 40px;
+          background-color: black;
+          border-radius: 50px;
+          animation: face-anim 4s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+
+          @keyframes face-anim {
+            0% {
+              height: 40px;
+            }
+            50% {
+              height: 80px;
+            }
+            100% {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

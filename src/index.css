@@ -83,7 +83,7 @@ a:hover:after {
 
 /* Custom Scroll Bar */
 body::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 body::-webkit-scrollbar-thumb {
