@@ -94,6 +94,7 @@ const Emoji = () => {
 
     // return () => {
     //   container.current.removeEventListener("mousemove", move);
+    //   container.current.removeEventListener("mouseleave", reset);
     //   left.current.removeEventListener("mouseenter", () => {});
     //   left.current.removeEventListener("mouseleave", () => {});
     //   right.current.removeEventListener("mouseenter", () => {});

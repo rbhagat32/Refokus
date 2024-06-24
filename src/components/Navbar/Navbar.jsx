@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../Utils/Button";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
