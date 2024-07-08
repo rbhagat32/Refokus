@@ -5,6 +5,7 @@ const Transition = (Component) => {
   return () => (
     <>
       <Component />
+      {console.log(Component.name)}
 
       <motion.div
         className="fixed top-0 left-0 w-full h-screen bg-black z-[9999] origin-top p-24"
