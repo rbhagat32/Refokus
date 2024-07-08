@@ -14,7 +14,8 @@ const Transition = (Component) => {
       >
         <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
           <h1 className="relative p-6 text-8xl font-bold flex items-end gap-2">
-            Refokus.
+            {Component.name === "Home" ? "Refokus." : `${Component.name}.`}
+
             <motion.span
               animate={{
                 backgroundColor: "rgb(34 197 94)",
