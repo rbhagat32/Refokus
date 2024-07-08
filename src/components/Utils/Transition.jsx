@@ -2,8 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Transition = (Component) => {
-  Component.routeName = Component.name || "Refokus";
-  console.log(Component.routeName);
+  let routeName = Component.name || "Home";
+
+  if (routeName === "RL" || routeName === "Home") routeName = "Refokus";
+  else if (routeName === "FL" || routeName === "About") routeName = "About";
+  else if (routeName === "YL" || routeName === "Work") routeName = "Work";
+  else if (routeName === "eO" || routeName === "News") routeName = "News";
+  else routeName = "Refokus";
 
   return () => (
     <>
@@ -17,9 +22,7 @@ const Transition = (Component) => {
       >
         <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
           <h1 className="relative p-6 text-8xl font-bold flex items-end gap-2">
-            {Component.routeName === "Home"
-              ? "Refokus."
-              : `${Component.routeName}.`}
+            {routeName === "Home" ? "Refokus." : `${routeName}.`}
 
             <motion.span
               animate={{
