@@ -5,8 +5,8 @@ const Transition = (Component) => {
   let routeName = Component.name || "Home";
 
   if (routeName === "RL" || routeName === "Home") routeName = "Refokus";
-  else if (routeName === "FL" || routeName === "About") routeName = "About";
-  else if (routeName === "YL" || routeName === "Work") routeName = "Work";
+  else if (routeName === "FL" || routeName === "Work") routeName = "Work";
+  else if (routeName === "YL" || routeName === "About") routeName = "About";
   else if (routeName === "eO" || routeName === "News") routeName = "News";
   else routeName = "Refokus";
 
