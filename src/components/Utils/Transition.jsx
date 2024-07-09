@@ -18,22 +18,44 @@ const Transition = (Component) => {
         className="fixed top-0 left-0 w-full h-screen bg-black z-[9999] origin-top p-24"
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1], delay: 2 }}
+        exit={{ y: "-100%", transition: { delay: 0 } }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 1 }}
       >
         <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
-          <h1 className="relative p-6 text-8xl font-bold flex items-end gap-2">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+            className="relative p-6 text-8xl font-bold flex items-end gap-2"
+          >
             {routeName === "Home" ? "Refokus." : `${routeName}.`}
 
-            <motion.span
-              animate={{
+            <span
+              style={{
                 backgroundColor: "rgb(34 197 94)",
                 boxShadow:
                   "2px 2px 20px 0px rgb(34 197 94), 2px -2px 20px 0px rgb(34 197 94), -2px 2px 20px 0px rgb(34 197 94), -2px -2px 20px 0px rgb(34 197 94), 2px 2px 60px 0px rgb(34 197 94), 2px -2px 60px 0px rgb(34 197 94), -2px 2px 60px 0px rgb(34 197 94), -2px -2px 60px 0px rgb(34 197 94)",
               }}
-              transition={{ delay: 1, duration: 0 }}
               className="absolute top-0 right-0 h-5 w-5 rounded-full"
             />
-          </h1>
+          </motion.h1>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="fixed top-0 left-0 w-full h-screen bg-black z-[9999] origin-bottom p-24"
+        initial={{ y: "-100%" }}
+        animate={{ y: "-100%" }}
+        exit={{ y: 0 }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="flex justify-center items-center w-full h-full border-y border-zinc-700">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+            className="relative p-6 text-8xl font-bold flex items-end gap-2"
+          >
+            {routeName === "Home" ? "Refokus." : `${routeName}.`}
+          </motion.h1>
         </div>
       </motion.div>
     </>
