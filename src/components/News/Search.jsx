@@ -1,7 +1,7 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
 
-const Search = () => {
+const Search = ({ handleFilter }) => {
   return (
     <div className="flex justify-between items-center py-12 mx-28">
       <div className="relative">
@@ -16,9 +16,10 @@ const Search = () => {
       </div>
 
       <div className="flex gap-2 items-center">
-        {["All", "Articles", "News", "Resources"].map((item, index) => {
+        {["All", "Article", "News", "Resource"].map((item, index) => {
           return (
             <button
+              onClick={() => handleFilter(item)}
               className="hover:text-zinc-50 text-zinc-300 py-2 px-5 bg-zinc-800 rounded-full transition-all duration-300 ease-in-out"
               key={index}
             >
