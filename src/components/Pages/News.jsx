@@ -6,16 +6,21 @@ import Search from "../News/Search";
 
 const News = () => {
   const [filter, setFilter] = useState("All");
-
   const handleFilter = (value) => {
     setFilter(value);
   };
 
+  const [search, setSearch] = useState("");
+
   return (
     <div className="container mx-auto">
       <Header />
-      <Search handleFilter={handleFilter} />
-      <Articles filter={filter} />
+      <Search
+        handleFilter={handleFilter}
+        search={search}
+        setSearch={setSearch}
+      />
+      <Articles filter={filter} search={search} />
     </div>
   );
 };

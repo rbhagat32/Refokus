@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "../Utils/Button";
 
-const Articles = ({ filter }) => {
+const Articles = ({ filter, search }) => {
   const data = [
     {
       title:
@@ -53,29 +53,34 @@ const Articles = ({ filter }) => {
     },
   ];
 
+  const filteredData = data.filter((item) => {
+    const matchFilter = filter === "All" ? item : item.type === filter;
+
+    const matchSearch =
+      search === "" ? item : item.title.toLowerCase().includes(search);
+
+    return matchFilter && matchSearch;
+  });
+
   return (
     <>
       <div className="mx-28 mb-20">
-        {data
-          .filter((item) => {
-            return filter === "All" ? item : item.type === filter;
-          })
-          .map((item, index) => {
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0.2 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="group flex gap-24 items-center py-6 border-b border-zinc-700 hover:border-[#fff] transition-all duration-300 ease-in-out"
-              >
-                <p className="group-hover:text-zinc-300 text-zinc-500 min-w-[80px]">
-                  {item.type}
-                </p>
-                <h2 className="text-2xl font-medium">{item.title}</h2>
-              </motion.div>
-            );
-          })}
+        {filteredData.map((item, index) => {
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0.2 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.75 }}
+              className="group flex gap-24 items-center py-6 border-b border-zinc-700 hover:border-[#fff] transition-all duration-300 ease-in-out"
+            >
+              <p className="group-hover:text-zinc-300 text-zinc-500 min-w-[80px]">
+                {item.type}
+              </p>
+              <h2 className="text-2xl font-medium">{item.title}</h2>
+            </motion.div>
+          );
+        })}
       </div>
 
       <div className="flex justify-center">
