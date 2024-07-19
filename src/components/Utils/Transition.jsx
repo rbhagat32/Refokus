@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 
 const Transition = (Component) => {
   let routeName = Component.name || "Home";
-  console.log(routeName);
 
   if (routeName === "RL" || routeName === "Home") routeName = "Refokus";
   else if (routeName === "FL" || routeName === "Work") routeName = "Work";
   else if (routeName === "YL" || routeName === "About") routeName = "About";
-  else if (routeName === "eO" || routeName === "News") routeName = "News";
+  else if (routeName === "JL" || routeName === "News") routeName = "News";
   else routeName = "Refokus";
 
   return () => (
