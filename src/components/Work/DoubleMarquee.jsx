@@ -56,7 +56,7 @@ const DoubleMarquee = () => {
     <div className="overflow-hidden container mx-auto mt-20">
       {/* Upper Marquee */}
       <div
-        className="myGradient flex"
+        className="myGradient flex border border-zinc-600"
         onMouseEnter={handleUpperMouseEnter}
         onMouseLeave={handleUpperMouseLeave}
       >
@@ -90,7 +90,7 @@ const DoubleMarquee = () => {
 
       {/* Lower Marquee */}
       <div
-        className="myGradient flex"
+        className="myGradient flex border border-zinc-600"
         onMouseEnter={handleLowerMouseEnter}
         onMouseLeave={handleLowerMouseLeave}
       >
