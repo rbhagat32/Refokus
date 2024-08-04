@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const DoubleMarquee = () => {
@@ -30,75 +30,125 @@ const DoubleMarquee = () => {
     "/work/double-marquee/22.svg",
   ];
 
+  const [isUpperHovered, setIsUpperHovered] = useState(false);
+  const [isLowerHovered, setIsLowerHovered] = useState(false);
+
+  useEffect(() => {
+    const upperMarqueeElements = document.querySelectorAll(".upper-marquee");
+    upperMarqueeElements.forEach((marquee) => {
+      marquee.style.animationPlayState = isUpperHovered ? "paused" : "running";
+    });
+  }, [isUpperHovered]);
+
+  useEffect(() => {
+    const lowerMarqueeElements = document.querySelectorAll(".lower-marquee");
+    lowerMarqueeElements.forEach((marquee) => {
+      marquee.style.animationPlayState = isLowerHovered ? "paused" : "running";
+    });
+  }, [isLowerHovered]);
+
+  const handleUpperMouseEnter = () => setIsUpperHovered(true);
+  const handleUpperMouseLeave = () => setIsUpperHovered(false);
+  const handleLowerMouseEnter = () => setIsLowerHovered(true);
+  const handleLowerMouseLeave = () => setIsLowerHovered(false);
+
   return (
     <div className="overflow-hidden container mx-auto mt-20">
       {/* Upper Marquee */}
-      <div className="myGradient flex">
+      <div
+        className="myGradient flex"
+        onMouseEnter={handleUpperMouseEnter}
+        onMouseLeave={handleUpperMouseLeave}
+      >
         <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
-          className="flex flex-shrink-0"
+          className="upper-marquee flex flex-shrink-0"
+          style={{ animation: "marquee 50s linear infinite" }}
         >
-          {upper_images.map((_, index) => (
+          {upper_images.map((src, index) => (
             <img
               loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
-              src={upper_images[index]}
+              src={src}
             />
           ))}
         </motion.div>
         <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
-          className="flex flex-shrink-0"
+          className="upper-marquee flex flex-shrink-0"
+          style={{ animation: "marquee 50s linear infinite" }}
         >
-          {upper_images.map((_, index) => (
+          {upper_images.map((src, index) => (
             <img
               loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
-              src={upper_images[index]}
+              src={src}
             />
           ))}
         </motion.div>
       </div>
 
       {/* Lower Marquee */}
-      <div className="myGradient flex">
+      <div
+        className="myGradient flex"
+        onMouseEnter={handleLowerMouseEnter}
+        onMouseLeave={handleLowerMouseLeave}
+      >
         <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
-          className="flex flex-shrink-0"
+          className="lower-marquee flex flex-shrink-0"
+          style={{ animation: "reverse-marquee 50s linear infinite" }}
         >
-          {lower_images.map((_, index) => (
+          {lower_images.map((src, index) => (
             <img
               loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
-              src={lower_images[index]}
+              src={src}
             />
           ))}
         </motion.div>
         <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
-          className="flex flex-shrink-0"
+          className="lower-marquee flex flex-shrink-0"
+          style={{ animation: "reverse-marquee 50s linear infinite" }}
         >
-          {lower_images.map((_, index) => (
+          {lower_images.map((src, index) => (
             <img
               loading="lazy"
               className="h-40 w-56 pr-20"
               key={index}
-              src={lower_images[index]}
+              src={src}
             />
           ))}
         </motion.div>
       </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        @keyframes reverse-marquee {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .upper-marquee {
+          animation: marquee 50s linear infinite;
+        }
+
+        .lower-marquee {
+          animation: reverse-marquee 50s linear infinite;
+        }
+      `}</style>
     </div>
   );
 };
