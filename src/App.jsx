@@ -16,7 +16,7 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
-  });
+  }, []);
 
   // Selection Disable
   useEffect(() => {
@@ -27,7 +27,7 @@ const App = () => {
     document.addEventListener("selectstart", (e) => {
       e.preventDefault();
     });
-  });
+  }, []);
 
   return (
     <div className="container mx-auto w-full">
